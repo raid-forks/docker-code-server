@@ -19,6 +19,8 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
 fi
 
+echo 'code-server' > /etc/hostname
+
 touch /root/.terminal
 echo "source /root/.terminal" >> /root/.bashrc
 echo "source /root/.terminal" >> /root/.profile
