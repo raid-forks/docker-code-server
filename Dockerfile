@@ -30,7 +30,6 @@ RUN \
     rustc \
     vim \
     tree \
-    left \
     neovim \
     unzip \
     python3 \
