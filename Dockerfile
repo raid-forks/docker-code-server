@@ -24,6 +24,18 @@ RUN \
   apt-get install -y \
     git \
     jq \
+    axel \
+    wget \
+    golang \
+    rustc \
+    vim \
+    tree \
+    left \
+    neovim \
+    unzip \
+    python3 \
+    python3-pip \
+    openjdk-11-jdk \
     libatomic1 \
     nano \
     net-tools \
@@ -45,9 +57,6 @@ RUN \
     npm i --production @node-rs/argon2; \
   fi && \
   echo "**** clean up ****" && \
-  apt-get purge --auto-remove -y \
-    build-essential \
-    nodejs && \
   apt-get clean && \
   rm -rf \
     /config/* \
