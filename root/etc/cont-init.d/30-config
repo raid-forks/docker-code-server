@@ -19,6 +19,10 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     fi
 fi
 
+touch /root/.terminal
+echo "source /root/.terminal" >> /root/.bashrc
+echo "source /root/.terminal" >> /root/.profile
+
 [[ ! -f /config/.bashrc ]] && \
     cp /root/.bashrc /config/.bashrc
 [[ ! -f /config/.profile ]] && \
