@@ -29,6 +29,7 @@ RUN \
     golang \
     rustc \
     vim \
+    llvm \
     tree \
     neovim \
     unzip \
