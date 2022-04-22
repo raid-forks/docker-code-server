@@ -7,7 +7,7 @@ if [ -n "${SUDO_PASSWORD}" ] || [ -n "${SUDO_PASSWORD_HASH}" ]; then
     
     if ! grep -q 'darkvoid' /etc/sudoers; then
         echo "adding darkvoid to sudoers"
-        echo "darkvoid ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
+        echo "darkvoid ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
     fi
     
     if [ -n "${SUDO_PASSWORD_HASH}" ]; then
