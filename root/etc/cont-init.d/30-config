@@ -21,9 +21,6 @@ fi
 
 echo 'code-server' > /etc/hostname
 
-touch /root/.terminal
-echo "source /root/.terminal" >> /root/.bashrc
-echo "source /root/.terminal" >> /root/.profile
 
 [[ ! -f /config/.bashrc ]] && \
     cp /root/.bashrc /config/.bashrc

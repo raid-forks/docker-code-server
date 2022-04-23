@@ -68,6 +68,14 @@ RUN \
 
 # add local files
 COPY /root /
+RUN touch /etc/.terminal && \
+    echo "source /etc/.terminal" >> /root/.bashrc && \
+    echo "source /etc/.terminal" >> /root/.profile && \
+    mkdir -p /home/abc && \
+    cp /root/.bashrc /home/abc/.bashrc && \
+    cp /root/.profile /home/abc/.profile && \
+    echo "source /etc/.terminal" >> /home/abc/.bashrc && \
+    echo "source /etc/.terminal" >> /home/abc/.profile 
 
 # ports and volumes
 EXPOSE 8443
